@@ -1,24 +1,50 @@
-# README
+# IMG しぇいく
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+画像投稿サイトです。ただし、普通の画像投稿サイトではなく、投稿された写真は自動的に、モザイク処理と、ピクセルのランダム表示を行うため、油絵並のごちゃごちゃ感とブレブレ感を味わうことができる一風変わった画像投稿サイトになります。
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+どんなにブレずに綺麗に取れた写真もブレッブレになる画像投稿サイトです。
 
-* Configuration
+### テーマを選んだ理由
 
-* Database creation
+こんなに時代は進歩しているのに、私のスマホ画像内の 40％は手振れ写真が締めています。同じような悩みを持った人にいまだ会ったことがないので、もういっそのこと、どんな美しく取れている写真もブレッブレにしてやろうと、恨み半ばな自分の思いを込め、画像処理に力を入れたサイトを作ることにしました。
 
-* Database initialization
+### ターゲットユーザ
 
-* How to run the test suite
+- 画像フォルダ内の手振れ写真が 40％以上占めている人。
+- 綺麗に写真撮れる人だけど、たまにはネタに走りたい人。
+- 写真以外でも、描いた絵など、油絵っぽくしたい人（絵師さん？）
+- 写真によって、身バレを怖がるが SNS をやりたい人。
 
-* Services (job queues, cache servers, search engines, etc.)
+### 主な利用シーン
 
-* Deployment instructions
+- どこ行ってきたでしょうか 💕 と、誰かに投げかける時。（ブレブレな写真に変換し、質問難易度を上げるため）
+- 描いた絵にもう１手間加えたい時。
+- 見た目があまりよくないご飯になってしまったが、ちょっと趣感を加えて誤魔化したい時。。。。ex
 
-* ...
+### どんなシーンだっていいんです。
+### ふと撮った写真を、ブレッブレにして、仲間と楽しみましょう ♪
+
+## 設計書
+
+https://docs.google.com/spreadsheets/d/1Xb3j10NmS9y90V3ZIw92_gJOrTBkLgqrCbj2dTD2M3I/edit?usp=sharing
+
+## チャレンジ要素一覧
+
+https://docs.google.com/spreadsheets/d/1TwT4wR7hAn1qdnuDDpcyEG30_Uflhr3XXDyGxPutrdU/edit#gid=0
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
+
+##### 参考にするサイト
+
+https://blog.codecamp.jp/programming-javascript-image
+https://qiita.com/PG0721/items/1d1f088e39147b48e24a

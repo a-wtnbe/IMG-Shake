@@ -4,7 +4,7 @@
     <%= attachment_image_tag article, :image %>
   <% end %>
   <p>投稿ユーザー画像：<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg'%></p>
-  <p>ショップ名：<%= article.title %></p>
+  <p>タイトル：<%= article.title %></p>
   <p>説明：<%= article.body %></p>
   <p>ユーザーネーム：<%= article.user.name %></p>
 </div>

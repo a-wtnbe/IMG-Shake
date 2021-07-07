@@ -7,8 +7,13 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-    @article.save
-    redirect_to articles_path
+    if @article.save
+      redirect_to article_path(@article), notice: "You have created book successfully."
+    else
+      @articles = Article.all
+      @user = current_user
+      render "show"
+    end
   end
 
   def index
@@ -16,6 +21,10 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @article = Article.find(params[:id])
+    if @article.user != current_user
+      redirect_to articles_path
+    end
   end
 
   def show
@@ -23,6 +32,12 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article), notice: "You have updated book successfully."
+    else
+      render "edit"
+    end
   end
 
   def destroy

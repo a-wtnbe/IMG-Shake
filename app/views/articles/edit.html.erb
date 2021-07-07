@@ -1,6 +1,6 @@
-<%= render 'layouts/error', model: f.object %>
+<%= render 'layouts/error', model: @article %>
 
-<h1>画像投稿フォーム</h1>
+<h1>編集</h1>
 <%= form_with model: @article, local:true do |f| %>
   <h4>画像</h4>
   <%= f.attachment_field :image %>
@@ -8,5 +8,5 @@
   <%= f.text_field :title %>
   <h4>説明</h4>
   <%= f.text_area :body %>
-  <%= f.submit '投稿' %>
+  <%= f.submit '編集' %>
 <% end %>

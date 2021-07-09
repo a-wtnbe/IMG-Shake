@@ -11,3 +11,22 @@
   <%= link_to '編集', edit_article_path(@article) %>
   <%= link_to "削除", article_path(@article), method: :delete, data: { confirm: '本当に消しますか？' } %>
 <% end %>
+
+<!--<div id="show_favorite_</%= @article.id %>">-->
+<!--  </%= render 'favorites/favorite', article: @article %>-->
+<!--</div>-->
+
+<%= render 'favorites/favorite', article: @article %>
+
+<div>
+    <h3>コメント</h3>
+      <div id="comments_area">
+        <%= render partial: 'comments/comments', locals: { comments: @comments } %>
+      </div>
+    <% if user_signed_in? %>
+        <div class="comment-create">
+            <h3>コメントを投稿する</h3>
+            <%= render partial: 'comments/form', locals: { comment: @comment, article: @article } %>
+        </div>
+    <% end %>
+</div>

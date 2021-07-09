@@ -1,0 +1,6 @@
+<!--投稿一覧いいね差し替え-->
+<!--$("#index_favorite_</%= @article.id %>").html("</%= j(render partial: 'favorites/favorite', locals: { article: @article}) %>");-->
+<!--投稿詳細いいね差し替え-->
+<!--$("#show/favorite_</%= @article.id %>").html("</%= j(render partial: 'favorites/favorite', locals: { article: @article}) %>");-->
+
+ $("#favorite<%= @book.id %>").html("<%= j(render 'favorites/favorite', book: @favorite.book) %>");

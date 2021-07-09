@@ -1,0 +1,19 @@
+<%= comments.count %>件コメント
+
+  <% comments.each do |comment| %>
+    <% unless comment.id.nil? %>
+      <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
+
+        <p><%= link_to "@#{comment.user.name}さん", user_path(comment.user.id) %></p>
+          <%= comment.content %>
+            <% if comment.user == current_user %>
+          　<%= link_to article_comment_path(comment.article_id, comment.id), method: :delete, remote: true do %>
+            　<i class="fas fa-trash" style="color: black;"></i>
+              <% end %>
+            <% end %>
+
+          <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+
+    <% end %>
+  <% end %>
+    </div>

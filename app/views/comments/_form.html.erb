@@ -1,0 +1,6 @@
+<%= form_with(model: [article, comment], url: article_comments_path(@article) ) do |form| %>
+  <div>
+    <%= form.text_area :content %>
+  </div>
+    <%= form.submit "送信" %>
+<% end %>

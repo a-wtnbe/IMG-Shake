@@ -30,8 +30,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @comment = Comment.new
-    #新着順で表示
-    @comments = @article.comments.order(created_at: :desc)
+    @comments = @article.comments
   end
 
   def update

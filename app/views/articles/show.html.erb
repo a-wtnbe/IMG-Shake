@@ -16,9 +16,9 @@
 <!--  <td class="favorite"><2%= render "favorites/favorite", article: @article %></td>-->
 <!--</tr>-->
 
-		  <div id="book_<%= @article.id %>">
-        <class="favorite"><%= render "favorites/favorite", article: @article %>
-<div>
+		  <div id="article_<%= @article.id %>">
+        <div class="favorite"><%= render "favorites/favorite", article: @article %></div>
+      <div>
     <h3>コメント</h3>
       <div id="comments_area">
         <%= render partial: 'comments/comments', locals: { comments: @comments } %>

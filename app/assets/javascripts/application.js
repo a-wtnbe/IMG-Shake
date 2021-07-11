@@ -18,3 +18,42 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+
+
+//= require effect
+var src_img = null;
+var dst_canvas = null;
+var dst_ctx = null;
+
+$(function(){
+  run();
+});
+
+
+  function run(){
+
+  src_img = document.getElementById("imgshake").childNodes[0];
+  dst_canvas = document.getElementById("DstCanvas");
+  dst_ctx = dst_canvas.getContext("2d");
+
+
+    // 元画像の描画
+    dst_canvas.width  = src_img.width;
+    dst_canvas.height = src_img.height;
+    dst_ctx.drawImage(src_img,0,0);
+
+    // ImageDataの生成
+    var source = dst_ctx.getImageData(0,0,dst_canvas.width,dst_canvas.height);
+    var destination = dst_ctx.createImageData(dst_canvas.width,dst_canvas.height);
+
+    // エフェクトの実行
+    EffectDiffusion(source,destination,7);
+
+    // canvasへ描画
+    dst_ctx.putImageData(destination,0,0);
+  }
+
+
+
+

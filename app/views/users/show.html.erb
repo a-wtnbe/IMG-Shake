@@ -36,14 +36,12 @@
              <%= attachment_image_tag article, :image, :fill, 100, 100 %>
 
             <section class="blog-text">
-                <a href="single.html">
-                  <p>ユーザーネーム：<%= article.user.name %></p>
-  <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no-image-icon.jpg" %>
+              <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no-image-icon.jpg" %>
+                  <%= article.user.name %>
+  
 
                  <p>タイトル：<%= article.title %></p>
     <p>説明：<%= article.body %></p>
-                </a
-              </h3>
 
             </section>
           </div>
@@ -64,7 +62,7 @@
 
 <% @articles.each do |article| %>
 <div>
-  <p>ユーザーネーム：<%= article.user.name %></p>
+  <%= article.user.name %>
   <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no-image-icon.jpg" %>
 
   <%= link_to article_path(article.id) do %>

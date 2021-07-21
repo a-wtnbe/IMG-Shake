@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 
 //= require jquery3
@@ -27,7 +26,9 @@ var dst_canvas = null;
 var dst_ctx = null;
 
 $(function(){
-  run();
+  setInterval(function() {
+    run()
+    }, 500);
 });
 
 
@@ -48,7 +49,7 @@ $(function(){
     var destination = dst_ctx.createImageData(dst_canvas.width,dst_canvas.height);
 
     // エフェクトの実行
-    EffectDiffusion(source,destination,2);
+    EffectDiffusion(source,destination,10);
 
     // canvasへ描画
     dst_ctx.putImageData(destination,0,0);

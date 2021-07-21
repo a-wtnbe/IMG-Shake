@@ -48,11 +48,28 @@ $(function(){
     var destination = dst_ctx.createImageData(dst_canvas.width,dst_canvas.height);
 
     // エフェクトの実行
-    EffectDiffusion(source,destination,7);
+    EffectDiffusion(source,destination,2);
 
     // canvasへ描画
     dst_ctx.putImageData(destination,0,0);
+
+    // // 元画像の描画
+    // dst_canvas.width  = src_img.width;
+    // dst_canvas.height = src_img.height;
+    // dst_ctx.drawImage(src_img,0,0);
+
+    // // ImageDataの生成
+    // var source = dst_ctx.getImageData(0,0,dst_canvas.width,dst_canvas.height);
+
+    // // エフェクトの実行
+    // EffectNoise(source,100);
+
+    // // canvasへ描画
+    // dst_ctx.putImageData(source,0,0);
+
   }
+
+
 
 
 

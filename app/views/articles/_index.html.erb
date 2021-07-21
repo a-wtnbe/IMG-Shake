@@ -1,31 +1,45 @@
-<!--<2% articles.each do |article| %>-->
-<!--<div>-->
-<!--  <p>ユーザーネーム：<2%= article.user.name %></p>-->
-<!--  <2%= attachment_image_tag user, :profile_image, :fill, 50, 50, format: 'jpeg' %>-->
-
-<!--  <2%= link_to article_path(article.id) do %>-->
-<!--    <2%= attachment_image_tag article, :image, :fill, 100, 100, format: 'jpeg' %>-->
-<!--    <p>タイトル：<2%= article.title %></p>-->
-<!--    <p>説明：<2%= article.body %></p>-->
-<!--  <2% end %>-->
-<!--</div>-->
-<!--<2% end %>-->
-
-<!--<tr id="article_<2%= article.id %>">-->
-<!--<td class="favorite"><2%= render "favorites/favorite", article: article %></td>-->
-<!--</tr>-->
 
 
-    <% articles.each do |article| %>
-      <div id="article_<%= article.id %>">
-          <%= link_to user_path(article.user) do %>
-            <%= attachment_image_tag(article.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
-          <% end %>
-          <%= attachment_image_tag article, :image, :fill, 100, 100, format: 'jpeg', fallback: "no-image-icon.jpg" %>
-        <%= link_to article.title, article_path(article), class: "article_#{article.id}" %>
-        <%= article.body %>
-        <div class="favorite"><%= render "favorites/favorite", article: article %></div>
+    <!--<2% articles.each do |article| %>-->
+    <!--  <div id="article_<2%= article.id %>">-->
+    <!--      <2%= link_to user_path(article.user) do %>-->
+    <!--        <2%= attachment_image_tag(article.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>-->
+    <!--      <2% end %>-->
+    <!--      <2%= attachment_image_tag article, :image, :fill, 100, 100, format: 'jpeg', fallback: "no-image-icon.jpg" %>-->
+    <!--    <2%= link_to article.title, article_path(article), class: "article_#{article.id}" %>-->
+    <!--    <2%= article.body %>-->
+    <!--    <div class="favorite"><2%= render "favorites/favorite", article: article %></div>-->
 
-      </div>
+    <!--  </div>-->
 
-    <% end %>
+    <!--<2% end %>-->
+
+
+
+
+
+
+
+       <% articles.each do |article| %>
+  <article class="comic">
+  <div class="panel">
+    <p class="speech">
+      <%= link_to user_path(article.user) do %>
+        <%= attachment_image_tag(article.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
+      <% end %>
+    </p>
+
+    <div id="article_<%= article.id %>">
+      <div class="favorite"><%= render "favorites/favorite", article: article %></div>
+      <%= attachment_image_tag article, :image %>
+
+    </div>
+    <p class="text bottom-right">
+      <%= link_to article.title, article_path(article), class: "article_#{article.id}" %>
+    </p>
+  </div>
+
+
+
+</article>
+   <% end %>

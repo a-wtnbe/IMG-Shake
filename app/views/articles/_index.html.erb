@@ -8,10 +8,13 @@
       <% end %>
     </p>
 
+<% if article.image_id %>
+  <canvas class="DstCanvas"></canvas>
+<% end %>
+
     <div id="article_<%= article.id %>">
       <div class="favorite"><%= render "favorites/favorite", article: article %></div>
-
-      <%= attachment_image_tag article, :image %>
+      <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image %></div>
 
     </div>
     <p class="text bottom-right">

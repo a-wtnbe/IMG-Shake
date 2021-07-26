@@ -1,53 +1,47 @@
-<!--<#% unless @user && @book == params[:word] %>-->
-<!--books一覧 -->
 <table class="table table-hover table-inverse">
-　<% if @range == '2' %>
-　<h2>Article search for "<%= (params[:word]) %>"</h2>
-  <thead>
+   <% if @range == '2' %>
+   <h2>Article search for "<%= (params[:word]) %>"</h2>
+   <thead>
     <tr>
-     <th></th>
      <th>Title</th>
      <th>Opinion</th>
      <th colspan="3"></th>
     </tr>
-  </thead>
-
-
-  <tbody>
+   </thead>
+   <tbody>
      <% @article.each do |article| %>
-     <tr>
-      <td>
-       <%= link_to(article.user) do %>
-       <%= attachment_image_tag(article.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
-       <% end %>
-      </td>
-      <td>
-       <%= link_to article.title, article, class: "article_#{article.id}" %>
-      </td>
-      <td><%= article.body %></td>
-     </tr>
+      <tr>
+       <td>
+        <%= link_to(article.user) do %>
+        <%= attachment_image_tag(article.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
+        <% end %>
+       </td>
+       <td>
+         <%= link_to article.title, article, class: "article_#{article.id}" %>
+       </td>
+       <td><%= article.body %></td>
+      </tr>
      <% end %>
-  </tbody>
+   </tbody>
 
-<!--User一覧-->
   <% else %>
   <h2>Users search for "<%= (params[:word]) %>"</h2>
   <thead>
-     <tr>
+    <tr>
       <th>image</th>
       <th>name</th>
       <th colspan="3"></th>
-     </tr>
-   </thead>
+    </tr>
+  </thead>
 
-   <tbody>
+  <tbody>
     <% @user.each do |user| %>
-     <tr>
-      <td><%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %></td>
-      <td><%= user.name%></td>
-      <td><%= link_to "Show", user, class: "user_#{user.id}" %></td>
-     </tr>
+      <tr>
+        <td><%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %></td>
+        <td><%= user.name%></td>
+        <td><%= link_to "Show", user, class: "user_#{user.id}" %></td>
+      </tr>
     <% end %>
-   </tbody>
-   <% end %>
- </table>
+  </tbody>
+  <% end %>
+</table>

@@ -1,3 +1,4 @@
+
 <%= comments.count %>件コメント
 <div>
   <% comments.each do |comment| %>
@@ -5,14 +6,14 @@
   <div>
     <%= attachment_image_tag comment.user, :profile_image, fallback: "no-image-icon.jpg", class:"comment-image", size: "40x40" %>
     <%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
-  </div>
-
-    <%= comment.content %>
     <% if comment.user == current_user %>
-    　<p><%= link_to article_comment_path(comment.article_id, comment.id), method: :delete, remote: true do %></p>
+    　<%= link_to article_comment_path(comment.article_id, comment.id), method: :delete, remote: true do %>
       <i class="fas fa-trash" style="color: black;"></i>
       <% end %>
     <% end %>
+  </div>
+
+    <%= comment.content %>
 　 <p><%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
   <% end %>
   <% end %>

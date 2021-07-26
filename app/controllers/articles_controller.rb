@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
     else
       @articles = Article.all
       @user = current_user
-      render "show"
+      render 'new'
     end
   end
 

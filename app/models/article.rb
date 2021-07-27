@@ -15,17 +15,20 @@ class Article < ApplicationRecord
 
 
   def self.search(search, word)
-        if search == "forward_match"
-                        @article = Article.where("title LIKE?","#{word}%")
-        elsif search == "backward_match"
-                        @article = Article.where("title LIKE?","%#{word}")
-        elsif search == "perfect_match"
-                        @article = Article.where("#{word}")
-        elsif search == "partial_match"
-                        @article = Article.where("title LIKE?","%#{word}%")
-        else
-                        @article = Article.all
-        end
-end
+    if search == "forward_match"
+      @article = Article.where("title LIKE?","#{word}%")
+    elsif search == "backward_match"
+      @article = Article.where("title LIKE?","%#{word}")
+    elsif search == "perfect_match"
+      @article = Article.where("#{word}")
+    elsif search == "partial_match"
+      @article = Article.where("title LIKE?","%#{word}%")
+    else
+      @article = Article.all
+    end
+  end
+
+  #mount_uploader 画像名を保存するカラム名, アップローダー名
+  # mount_uploader :image, HogeUploader
 
 end

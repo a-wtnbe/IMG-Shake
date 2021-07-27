@@ -4,7 +4,7 @@
   <% unless comment.id.nil? %>
 
   <div>
-    <%= attachment_image_tag comment.user, :profile_image, fallback: "no-image-icon.jpg", class:"comment-image", size: "40x40" %>
+    <%= attachment_image_tag comment.user, :profile_image, fallback: "k0917_2.jpg", class:"comment-image", size: "40x40" %>
     <%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
     <% if comment.user == current_user %>
     　<%= link_to article_comment_path(comment.article_id, comment.id), method: :delete, remote: true do %>

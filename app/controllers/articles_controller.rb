@@ -7,7 +7,8 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-    if @article.save
+    if
+      @article.save
       redirect_to article_path(@article), notice: "You have created book successfully."
     else
       @articles = Article.all
@@ -52,6 +53,10 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :image, :body)
+  end
+
+  def hoge_params
+    params.require(:hoge).permit(:image)
   end
 
 end

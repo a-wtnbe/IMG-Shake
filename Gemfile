@@ -76,3 +76,6 @@ gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
 end
+
+gem 'carrierwave'
+gem 'mini_magick'

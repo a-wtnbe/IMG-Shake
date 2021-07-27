@@ -1,8 +1,10 @@
 <div class="my">
   <div class="name">neme:<%= @user.name %></div>
-  <div class="introduction">紹介文:<%= @user.introduction %></div>
+  <div class="introduction">紹介文:
+    <div><%= @user.introduction %></div>
+  </div>
   <div class="profile_image">
-    <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no-image-icon.jpg" %>
+    <%= attachment_image_tag @user, :profile_image, size:"30x30", format: 'jpeg', fallback: "k0917_2.jpg" %>
   </div>
   <div class="boxContainer">
     <div class="box">投稿数:<%= @user.articles.count %></div>

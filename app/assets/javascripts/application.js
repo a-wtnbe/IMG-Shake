@@ -77,7 +77,7 @@ $(function(){
           const destination = targetElement.createImageData(elements[step].width,elements[step].height);
 
           // エフェクトの実行
-          EffectDiffusion(source,destination,10);
+          EffectDiffusion(source,destination,20);
 
           // canvasへ描画
           targetElement.putImageData(destination,0,0);

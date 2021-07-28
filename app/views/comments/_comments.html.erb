@@ -3,7 +3,7 @@
   <% comments.each do |comment| %>
   <% unless comment.id.nil? %>
 
-  <div>
+  <div class="comment">
     <div class="icon">
       <%= attachment_image_tag comment.user, :profile_image, fallback: "k0917_2.jpg", class:"comment-image", size: "40x40" %>
     </div>

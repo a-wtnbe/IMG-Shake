@@ -11,6 +11,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
+  font-weight: 900;
 }
 
 .gazo {
@@ -20,7 +22,8 @@
   justify-content: flex-start;
   position: relative;
   left: 30px;
-  
+
+
   .DstCanvas {
     width: 100px;
   }
@@ -29,8 +32,16 @@
 
 .icon {
   padding: 25px 0 0 30px;
-}
+  left: 50px;
 
+  p {
+    width: 200px;
+    height: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    }
+
+}
 
 .my {
   background: #fafdff;
@@ -40,6 +51,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
+  font-weight: 900;
 
 }
 .name {

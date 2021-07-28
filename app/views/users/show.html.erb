@@ -30,7 +30,7 @@
     <div class="gazo" style="background-color: rgb(250, 253, 255);">
       <canvas class="DstCanvas"></canvas>
       <%= link_to article_path(article.id) do %>
-        <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image, :fill, 100, 100 %></div>
+        <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image, :fill, 100, 100, size: "100x100" %></div>
       <% end %>
       <div class="icon">
         <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "k0917_2.jpg" %>

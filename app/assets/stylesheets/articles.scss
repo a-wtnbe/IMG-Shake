@@ -3,10 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-html, body {
-  margin:0;
-  padding:0;
-}
+// html, body {
+//   margin:0;
+//   padding:0;
+// }
 
 .comic {
   display:flex;
@@ -54,4 +54,9 @@ text {
   right: 10px;
   transform:skew(-15deg);
   margin:3vmin;
+}
+
+.icon {
+  position: relative;
+  right: 130px;
 }

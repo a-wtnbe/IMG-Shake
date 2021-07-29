@@ -2,7 +2,7 @@
 
 ## サイト概要
 
-画像投稿サイトです。ただし、普通の画像投稿サイトではなく、投稿された写真は自動的に、モザイク処理と、ピクセルのランダム表示を行うため、油絵並のごちゃごちゃ感とブレブレ感を味わうことができる一風変わった画像投稿サイトになります。
+画像投稿サイトです。ただし、普通の画像投稿サイトではなく、投稿された写真は自動的に、ピクセルのランダム表示を行うため、油絵とスプレーアートを足して割ったぐらいのごちゃごちゃ感とブレブレ感を味わうことができる一風変わった画像投稿サイトになります。
 
 ### サイトテーマ
 
@@ -41,10 +41,5 @@ https://docs.google.com/spreadsheets/d/1TwT4wR7hAn1qdnuDDpcyEG30_Uflhr3XXDyGxPut
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
 - フレームワーク：Ruby on Rails
-- JS ライブラリ：jQuery
+- JS ライブラリ：jQuery, Effect.js
 - IDE：Cloud9
-
-##### 参考にするサイト
-
-https://blog.codecamp.jp/programming-javascript-image
-https://qiita.com/PG0721/items/1d1f088e39147b48e24a

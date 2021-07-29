@@ -14,8 +14,8 @@ class Article < ApplicationRecord
   end
 
 
-  def self.search(search, word)
-    if search == "partial_match"
+  def self.search(word)
+    unless word == ""
       @article = Article.where("title LIKE?","%#{word}%")
     else
       @article = Article.all

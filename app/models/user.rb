@@ -36,8 +36,8 @@ def following?(user)
   followings.include?(user)
 end
 
-def self.search_for(search,word)
-    if search == "partial_match"
+def self.search_for(word)
+   unless word == ""
        User.where("name LIKE?","%#{word}%")
     else
        User.all

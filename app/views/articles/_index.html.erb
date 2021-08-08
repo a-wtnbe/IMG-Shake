@@ -15,13 +15,12 @@
       <div id="article_<%= article.id %>">
         <div class="favorite"><%= render "favorites/favorite", article: article %></div>
         <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image, :fill, 510, 340, size: "510x340" %></div>
-        <!--<2%= image_tag "/uploads/hoge/image/#{i[:id]}/#{i[:image]}" %>-->
       </div>
       <p class="text bottom-right">
         <%= link_to article.title, article_path(article), class: "article_#{article.id}" %>
       </p>
     </div>
   </article>
-  </div>
+</div>
 <% end %>
-<div class="kaminari"><%= paginate @articles %></div>
+<div class="kaminari"><%= paginate @article %></div>

@@ -7,6 +7,5 @@ class SearchesController < ApplicationController
     else
       @article = Article.search(word)
     end
-    # binding.pry
   end
 end

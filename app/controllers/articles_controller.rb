@@ -7,19 +7,18 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-    if
-      @article.save
-      redirect_to article_path(@article), notice: "You have created book successfully."
+    if @article.save
+       redirect_to article_path(@article), notice: "You have created book successfully."
     else
-      @articles = Article.all
-      @user = current_user
-      render 'new'
+       @articles = Article.all
+       @user = current_user
+       render 'new'
     end
   end
 
   def index
     @articles = Article.all.order(created_at: :desc)
-    @articles = Article.page(params[:page]).reverse_order
+    @article = Article.page(params[:page]).reverse_order
   end
 
   def edit
@@ -54,10 +53,6 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :image, :body)
-  end
-
-  def hoge_params
-    params.require(:hoge).permit(:image)
   end
 
 end

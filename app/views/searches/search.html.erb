@@ -13,9 +13,9 @@
        <% @article.each do |article| %>
         <tr>
          <td>
-           <%= link_to article.title, article, class: "article_#{article.id}" %>
+           <%= link_to article.title.truncate(30), article, class: "article_#{article.id}" %>
          </td>
-         <td><%= article.body %></td>
+         <td><%= article.body.truncate(50) %></td>
         </tr>
        <% end %>
      </tbody>

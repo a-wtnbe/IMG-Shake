@@ -17,11 +17,11 @@
         <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image, :fill, 510, 340, size: "510x340" %></div>
       </div>
 
-        <p class="text bottom-right">
-          <span style="background-color:#fcc800">
+      <p class="text bottom-right">
+        <span style="background-color:#fcc800">
           <%= link_to article.title, article_path(article), class: "article_#{article.id}" %>
-          </span>
-        </p>
+        </span>
+      </p>
 
     </div>
   </article>

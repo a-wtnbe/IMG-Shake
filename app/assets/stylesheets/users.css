@@ -1,0 +1,47 @@
+.my {
+  background: #fafdff;
+  width: 380px;
+  height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
+  font-weight: 900; }
+
+.name {
+  position: relative;
+  top: 50px;
+  left: 50px; }
+
+.introduction {
+  position: relative;
+  top: 60px;
+  left: 50px; }
+
+.profile_image {
+  position: relative;
+  left: 100px; }
+
+.box {
+  float: left;
+  margin-left: 10px; }
+
+.boxContainer {
+  overflow: hidden;
+  position: relative;
+  top: 30px;
+  left: 40px; }
+
+.prof {
+  position: relative;
+  top: 30px;
+  left: 150px;
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
+
+.container {
+  font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
+  font-weight: 900; }
+
+/*# sourceMappingURL=users.css.map */

@@ -25,21 +25,27 @@
   </div>
 </div>
 
-<div class="articles">
-  <% @articles.each do |article| %>
-    <div class="gazo" style="background-color: rgb(250, 253, 255);">
+<% @articles.each do |article| %>
+  <div class='container'>
+    <article class="comic">
+      <div class="panel">
+
+      <% if article.image_id %>
       <canvas class="DstCanvas"></canvas>
+       <% end %>
+
       <%= link_to article_path(article.id) do %>
-        <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image, :fill, 100, 100, size: "100x100" %></div>
+        <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image, :fill, 510, 340, size: "510x340" %></div>
       <% end %>
-      <div class="icon">
-        <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "k0917_2.jpg" %>
-          <%= article.user.name %>
-          <%= link_to article_path(article.id) do %>
-            <p>タイトル：<%= article.title %></p>
-          <% end %>
-          <p>説明：<%= article.body %></p>
-      </div>
-    </div>
-  <% end %>
-</div>
+      <%= link_to article_path(article.id) do %>
+        <p>タイトル：<%= article.title %></p>
+      <% end %>
+        <p>説明：<%= article.body %></p>
+       </div>
+    </article>
+  </div>
+<% end %>
+
+<div class="kaminari"><%= paginate @article %></div>
+
+

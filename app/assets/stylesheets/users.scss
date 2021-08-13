@@ -4,87 +4,129 @@
 
 
 
-.articles {
-  width: 380px;
-  height: 250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
-  font-weight: 900;
-}
+// .articles {
+//   width: 380px;
+//   height: 250px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: 20px;
+//   font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
+//   font-weight: 900;
+// }
 
-.gazo {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  left: 30px;
+// .gazo {
+//   padding-bottom: 20px;
+//   margin-bottom: 20px;
+//   display: flex;
+//   justify-content: flex-start;
+//   position: relative;
+//   left: 30px;
 
 
-  .DstCanvas {
-    width: 100px;
-  }
+//   .DstCanvas {
+//     width: 100px;
+//   }
 
-}
+// }
 
-.icon {
-  padding: 25px 0 0 30px;
-  left: 50px;
+// .icon {
+//   padding: 25px 0 0 30px;
+//   left: 50px;
 
-  p {
-    width: 200px;
-    height: 100px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    }
+//   p {
+//     width: 200px;
+//     height: 100px;
+//     overflow-wrap: break-word;
+//     word-wrap: break-word;
+//     }
 
-}
+// }
 
-.my {
-  background: #fafdff;
-  width: 380px;
-  height: 250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
-  font-weight: 900;
+// .my {
+//   background: #fafdff;
+//   width: 380px;
+//   height: 250px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: 20px;
+//   font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
+//   font-weight: 900;
 
-}
-.name {
-  position: relative;
-  top: 50px;
-  left: 50px;
-}
-.introduction {
-  position: relative;
-  top: 60px;
-  left: 50px;
-}
-.profile_image {
-  position: relative;
-  left: 100px;
-}
-.box{
-float: left;
-margin-left: 10px;
-}
+// }
+// .name {
+//   position: relative;
+//   top: 50px;
+//   left: 50px;
+// }
+// .introduction {
+//   position: relative;
+//   top: 60px;
+//   left: 50px;
+// }
+// .profile_image {
+//   position: relative;
+//   left: 100px;
+// }
+// .box{
+// float: left;
+// margin-left: 10px;
+// }
 
-.boxContainer{
-  overflow: hidden;
-  position: relative;
-  top: 30px;
-  left: 40px;
+// .boxContainer{
+//   overflow: hidden;
+//   position: relative;
+//   top: 30px;
+//   left: 40px;
 
-}
-.prof {
-  position: relative;
-  top: 30px;
-  left: 150px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+// }
+// .prof {
+//   position: relative;
+//   top: 30px;
+//   left: 150px;
+//   overflow-wrap: break-word;
+//   word-wrap: break-word;
+// }
+
+// // .asahi {
+// //   width: 500px;
+// //   height: auto;
+// //   margin: 10px;
+// //   background-color: white;
+// // }
+
+// .container {
+//   font-family: YuGothic,'Yu Gothic','Arial Black','Impact',sans-serif;
+//   font-weight: 900;
+// }
+// .comic {
+//   display:flex;
+//   flex-wrap:wrap;
+//   // font-family:'Comic Sans', cursive;
+//   padding:1vmin;
+//   float: left;
+// }
+
+// .panel {
+//   background-color:#fff;
+//   border:solid 2px #000;
+//   box-shadow:0 6px 6px -6px #000;
+//   display:inline-block;
+//   flex:1 1;
+//   // height:400px;
+//   margin:1vmin;
+//   overflow:hidden;
+//   position:relative;
+//   width: 510px;
+// }
+// .DstCanvas {
+//     width: 510px;
+//     height: 340px;
+// }
+// .kaminari {
+//   position: absolute;
+//   bottom: 0;
+//   margin-bottom: 110px;
+//   background-color: #ea609e;
+// }

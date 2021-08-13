@@ -16,9 +16,11 @@
         <div class="favorite"><%= render "favorites/favorite", article: article %></div>
         <div class="<%= article.image_id ? 'imgshake' : '' %>" hidden><%= attachment_image_tag article, :image, :fill, 510, 340, size: "510x340" %></div>
       </div>
-      <p class="text bottom-right">
-        <%= link_to article.title, article_path(article), class: "article_#{article.id}" %>
-      </p>
+      <div class="red">
+        <p class="text bottom-right">
+          <%= link_to article.title, article_path(article), class: "article_#{article.id}" %>
+        </p>
+      </div>
     </div>
   </article>
 </div>

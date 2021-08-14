@@ -7,15 +7,15 @@
           <div class="panel">
             <canvas id="DstCanvas"></canvas>
             <div id="imgshake" hidden><%= attachment_image_tag @article, :image, :fill, 500, 500 %></div>
-            
+
             <div class="kaigyo">
               <%= link_to user_path(@article.user) do %>
-                <%= attachment_image_tag(@article.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "k0917_2.jpg") %>
+                <%= attachment_image_tag(@article.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "imgshake2.png") %>
                 <%= @article.user.name %>
               <% end %>
               <p>タイトル：<%= @article.title %></p>
               <p>説明：<%= @article.body %></p>
-  
+
               <p class="text bottom-right">投稿日時：<%= @article.created_at.strftime('%Y/%m/%d') %></p>
               <% if @article.user == current_user %>
                 <%= link_to '編集', edit_article_path(@article) %>

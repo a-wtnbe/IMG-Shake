@@ -4,7 +4,7 @@
     <div><%= @user.introduction %></div>
   </div>
   <div class="profile_image">
-    <%= attachment_image_tag @user, :profile_image, size:"30x30", format: 'jpeg', fallback: "k0917_2.jpg" %>
+    <%= attachment_image_tag @user, :profile_image, size:"50x50", format: 'jpeg', fallback: "imgshake2.png" %>
   </div>
   <div class="boxContainer">
     <div class="box">投稿数:<%= @user.articles.count %></div>
@@ -45,7 +45,3 @@
     </article>
   </div>
 <% end %>
-
-<div class="kaminari"><%= paginate @article %></div>
-
-

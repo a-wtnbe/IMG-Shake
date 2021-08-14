@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.order(created_at: :desc)
-    @article = Article.page(params[:page]).reverse_order
+    @articles = Article.page(params[:page]).reverse_order
   end
 
   def edit

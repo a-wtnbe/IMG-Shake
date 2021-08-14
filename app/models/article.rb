@@ -22,7 +22,4 @@ class Article < ApplicationRecord
     end
   end
 
-  #mount_uploader 画像名を保存するカラム名, アップローダー名
-  # mount_uploader :image, HogeUploader
-
 end
